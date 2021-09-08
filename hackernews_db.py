@@ -17,8 +17,8 @@ class HackerNewsSqlite(HackerNews):
         cursor = conn.cursor()
         cursor.execute("DROP TABLE IF EXISTS TOP_NEWS")
         print('**************** Dropped existing table ****************')
-        create_table_sql = '''CREATE TABLE TOP_NEWS(id INT NOT NULL PRIMARY KEY,type CHAR(10),by VARCHAR(50),
-        url VARCHAR,title VARCHAR)'''
+        create_table_sql = '''CREATE TABLE TOP_NEWS(ID INT NOT NULL PRIMARY KEY,TYPE CHAR(10),BY VARCHAR(50),
+        URL VARCHAR,TITLE VARCHAR)'''
         cursor.execute(create_table_sql)
         print('**************** Table created ****************')
         insert_sql = '''INSERT INTO TOP_NEWS VALUES(?,?,?,?,?)'''
